@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import axios from "axios";
-import './ProductForm.css';
+import style from "./ProductForm.module.css"
 
 export default ()=>{
     const [title,setTitle] = useState('');
@@ -17,7 +17,7 @@ export default ()=>{
     }
 
     return(
-        <form onSubmit={onSubmitHandler} class="flexer">
+        <form onSubmit={onSubmitHandler} className={style.flexer}>
             <label>Title:</label>
             <input type='text' onChange={(e)=>{setTitle(e.target.value)}} value={title}/><br/>
             <label>Price:</label>

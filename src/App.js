@@ -7,7 +7,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link
+  Link,
 } from "react-router-dom";
 import Detail from './Components/Detail';
 import Update from './Components/Update';

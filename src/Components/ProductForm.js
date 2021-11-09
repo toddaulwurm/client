@@ -18,6 +18,7 @@ export default ()=>{
 
     return(
         <form onSubmit={onSubmitHandler} className={style.flexer}>
+                        <h1>Add a Product here!</h1>
             <label>Title:</label>
             <input type='text' onChange={(e)=>{setTitle(e.target.value)}} value={title}/><br/>
             <label>Price:</label>

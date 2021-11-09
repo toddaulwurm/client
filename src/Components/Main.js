@@ -21,7 +21,6 @@ export default () => {
     
     return (
         <div>
-            <h1>Add a Product here!</h1>
             <ProductForm/>
             <hr/>
             <h2>Current Inventory:</h2>

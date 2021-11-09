@@ -15,6 +15,9 @@ export default () => {
             })
             .catch(err => console.error(err));
     },[products]);
+    const removeFromDom = productId => {
+        setProducts(products.filter(product => product._id != productId));
+    }
     
     return (
         <div>
@@ -22,7 +25,7 @@ export default () => {
             <ProductForm/>
             <hr/>
             <h2>Current Inventory:</h2>
-            {loaded && <ProductList products={products}/>}
+            {loaded && <ProductList products={products} removeFromDom={removeFromDom}/>}
         </div>
     )
 }

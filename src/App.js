@@ -10,6 +10,7 @@ import {
   Link
 } from "react-router-dom";
 import Detail from './Components/Detail';
+import Update from './Components/Update';
 
 function App() {
   return (
@@ -19,12 +20,17 @@ function App() {
       </header>
           <BrowserRouter>
             <Link to="/products/">Home</Link>
-              <Route path="/products/">
+            <Switch>
+              <Route exact path="/products/">
                 <Main />
               </Route>
-              <Route path="/api/product/:id">
+              <Route path="/products/:id/edit">
+                <Update />
+              </Route>
+              <Route path="/products/:id">
                 <Detail />
               </Route>
+              </Switch>
           </BrowserRouter>
       {/* <Main></Main> */}
     </div>
